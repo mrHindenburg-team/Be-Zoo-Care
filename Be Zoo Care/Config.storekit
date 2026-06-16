@@ -1,0 +1,69 @@
+{
+  "appPolicies" : {
+    "eula" : "",
+    "policies" : [
+      {
+        "locale" : "en_US",
+        "policyText" : "",
+        "policyURL" : ""
+      }
+    ]
+  },
+  "identifier" : "BEA2C12F",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "EE46BA34",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Animal Expert Pack",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "BeZooCare.expert.pack",
+      "referenceName" : "Animal Expert Pack",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "640B0417",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Zoo Guardian Pack",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "BeZooCare.guardian.pack",
+      "referenceName" : "Zoo Guardian Pack",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_askToBuyEnabled" : false,
+    "_billingGracePeriodEnabled" : false,
+    "_billingIssuesEnabled" : false,
+    "_disableDialogs" : false,
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_renewalBillingIssuesEnabled" : false,
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+
+    ],
+    "_timeRate" : 0
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 5,
+    "minor" : 0
+  }
+}

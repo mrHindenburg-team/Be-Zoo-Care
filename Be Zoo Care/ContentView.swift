@@ -1,24 +1,29 @@
-//
-//  ContentView.swift
-//  Be Zoo Care
-//
-//  Created by Tymur on 15.06.2026.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("bzcHasCompletedOnboarding") private var hasCompletedOnboarding = false
+    @State private var showSplash = true
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Group {
+            if showSplash {
+                BZCSplashView {
+                    showSplash = false
+                }
+            } else if !hasCompletedOnboarding {
+                BZCOnboardingView {
+                    hasCompletedOnboarding = true
+                }
+            } else {
+                BZCMainTabView()
+            }
         }
-        .padding()
+        .preferredColorScheme(.dark)
     }
 }
 
 #Preview {
     ContentView()
+        .environment(SubscriptionManager())
+        .environment(BZCGuardianProgress())
 }
