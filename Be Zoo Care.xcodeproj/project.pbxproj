@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3B795CA72FFE50D9008A188B /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3B795CA62FFE50D9008A188B /* FirebaseCore */; };
+		3B795CA92FFE50D9008A188B /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 3B795CA82FFE50D9008A188B /* FirebaseMessaging */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		3B238D262FE02C6200675C85 /* Be Zoo Care.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Be Zoo Care.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B795CA92FFE50D9008A188B /* FirebaseMessaging in Frameworks */,
+				3B795CA72FFE50D9008A188B /* FirebaseCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,8 @@
 			);
 			name = "Be Zoo Care";
 			packageProductDependencies = (
+				3B795CA62FFE50D9008A188B /* FirebaseCore */,
+				3B795CA82FFE50D9008A188B /* FirebaseMessaging */,
 			);
 			productName = "Be Zoo Care";
 			productReference = 3B238D262FE02C6200675C85 /* Be Zoo Care.app */;
@@ -107,6 +116,9 @@
 			);
 			mainGroup = 3B238D1D2FE02C6200675C85;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3B795CA52FFE50D9008A188B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3B238D272FE02C6200675C85 /* Products */;
 			projectDirPath = "";
@@ -280,7 +292,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.BeZooCare.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -326,7 +338,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.BeZooCare.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -366,6 +378,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B795CA52FFE50D9008A188B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B795CA62FFE50D9008A188B /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B795CA52FFE50D9008A188B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		3B795CA82FFE50D9008A188B /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B795CA52FFE50D9008A188B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3B238D1E2FE02C6200675C85 /* Project object */;
 }
